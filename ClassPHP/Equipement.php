@@ -1,5 +1,7 @@
 <?php 
 
+require "Element.php";
+
 class Equipement{
     private $_nom;//string
     private $_type; //defini le type de l'equipement (Arme,Armure ou Amulette)
