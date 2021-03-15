@@ -3,6 +3,7 @@
 class Equipement{
     private $_nom;
     private $_type;
+    private $_element;
     private $_dgtAjoutes;
     private $_valeur;
     private $_tauxDrop;
@@ -10,9 +11,10 @@ class Equipement{
     private $_buff;
     private $_classeAutorise;
 
-    public function __construct($nom,$type,$dgtAjoutes,$valeur,$tauxDrop,$rarete,$buff,$classeAutorise){
+    public function __construct($nom,$type,$element,$dgtAjoutes,$valeur,$tauxDrop,$rarete,$buff,$classeAutorise){
         $this->_nom = $nom;
         $this->_type = $type;
+        $this->_element = $element;
         $this->_dgtAjoutes = $dgtAjoutes;
         $this->_valeur = $valeur;
         $this->_tauxDrop = $tauxDrop;
@@ -29,6 +31,10 @@ class Equipement{
     public function getType(){
     
         return $this->_type;
+    }
+    public function getElement(){
+
+        return $this->_element;
     }
     public function getDgtAjoutes(){
     
@@ -63,6 +69,12 @@ class Equipement{
     public function setType($_type){
     
         $this->_type = $_type;
+
+        return $this;
+    }
+    public function setElement($_element){
+
+        $this->_element = $_element;
 
         return $this;
     }
