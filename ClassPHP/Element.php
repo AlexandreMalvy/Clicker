@@ -75,7 +75,11 @@ class Element{
         return $this->_tenebres;
     }
 
-
+    
+    
+// CES FONCTIONS SONT A AJOUTER SUR L'INDEX.PHP SAUF SI ON APPREND A
+// LES GARDER DANS LA CLASSE. CE SONT DES CONSTRUCTEURS AUTOMATIQUES
+    
 /*     function feu(){
         $varElem = new Element("Feu", -20, 10, -20, 20, -10, 0, 0);
         return $varElem;
