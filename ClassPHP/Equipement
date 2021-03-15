@@ -1,0 +1,105 @@
+<?php 
+
+class Equipement{
+    private $_nom;
+    private $_type;
+    private $_dgtAjoutes;
+    private $_valeur;
+    private $_tauxDrop;
+    private $_rarete;
+    private $_buff;
+    private $_classeAutorise;
+
+    public function __construct($nom,$type,$dgtAjoutes,$valeur,$tauxDrop,$rarete,$buff,$classeAutorise){
+        $this->_nom = $nom;
+        $this->_type = $type;
+        $this->_dgtAjoutes = $dgtAjoutes;
+        $this->_valeur = $valeur;
+        $this->_tauxDrop = $tauxDrop;
+        $this->_rarete = $rarete;
+        $this->_buff = $buff;
+        $this->_classeAutorise = $classeAutorise;
+    }
+
+    public function getNom(){
+    
+        return $this->_nom;
+
+    }
+    public function getType(){
+    
+        return $this->_type;
+    }
+    public function getDgtAjoutes(){
+    
+        return $this->_dgtAjoutes;
+    }
+    public function getValeur(){
+    
+        return $this->_valeur;
+    }
+    public function getTauxDrop(){
+    
+        return $this->_tauxDrop;
+    }
+    public function getRarete(){
+    
+        return $this->_rarete;
+    } 
+    public function getBuff(){
+    
+        return $this->_buff;
+    }
+    public function getClasseAutorise(){
+    
+        return $this->_classeAutorise;
+    }
+    public function setNom($_nom){
+    
+        $this->_nom = $_nom;
+
+        return $this;
+    }
+    public function setType($_type){
+    
+        $this->_type = $_type;
+
+        return $this;
+    }
+    public function setDgtAjoutes($_dgtAjoutes){
+    
+        $this->_dgtAjoutes = $_dgtAjoutes;
+
+        return $this;
+    }
+    public function setValeur($_valeur){
+    
+        $this->_valeur = $_valeur;
+
+        return $this;
+    }
+    public function setTauxDrop($_tauxDrop){
+    
+        $this->_tauxDrop = $_tauxDrop;
+
+        return $this;
+    } 
+    public function setRarete($_rarete){
+    
+        $this->_rarete = $_rarete;
+
+        return $this;
+    }
+    public function setBuff($_buff){
+    
+        $this->_buff = $_buff;
+
+        return $this;
+    }
+    public function setClasseAutorise($_classeAutorise){
+    
+        $this->_classeAutorise = $_classeAutorise;
+
+        return $this;
+    }
+}    
