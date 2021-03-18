@@ -1,3 +1,5 @@
-# Clicker_JS
+# Clicker_RPG
 
-Projet de clicker en duo
+Projet de clicker en trio<br>
+<br>
+
