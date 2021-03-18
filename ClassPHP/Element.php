@@ -7,7 +7,6 @@ class Element{
     private $_metal;
     private $_eau;
     private $_plante;
-
     private $_lumiere;
     private $_tenebres;
 
@@ -18,7 +17,6 @@ class Element{
         $this->_metal = $m;
         $this->_eau = $e;
         $this->_plante = $p;
-
         $this->_lumiere = $lum;
         $this->_tenebres = $ten;
     }
@@ -26,14 +24,13 @@ class Element{
 
     public function afficherDgt(){
         $str = "<p>Element ".$this->getNom()."<br>";
-        $str.= "Dégats contre Feu : ".$this->getFeu()."%<br></p>";
-        $str.= "Dégats contre Terre : ".$this->getTerre()."%<br></p>";
-        $str.= "Dégats contre Métal : ".$this->getMetal()."%<br></p>";
-        $str.= "Dégats contre Eau : ".$this->getEau()."%<br></p>";
-        $str.= "Dégats contre Plante : ".$this->getPlante()."%<br></p>";
-        $str.= "Dégats contre Lumière : ".$this->getLumiere()."%<br></p>";
+        $str.= "Dégats contre Feu : ".$this->getFeu()."%<br>";
+        $str.= "Dégats contre Terre : ".$this->getTerre()."%<br>";
+        $str.= "Dégats contre Métal : ".$this->getMetal()."%<br>";
+        $str.= "Dégats contre Eau : ".$this->getEau()."%<br>";
+        $str.= "Dégats contre Plante : ".$this->getPlante()."%<br>";
+        $str.= "Dégats contre Lumière : ".$this->getLumiere()."%<br>";
         $str.= "Dégats contre Ténèbres : ".$this->getTenebres()."%<br></p>";
-
         return $str;
     }
     
@@ -41,73 +38,67 @@ class Element{
     public function getNom(){
         return $this->_nom;
     }
-
     public function getFeu(){
         return $this->_feu;
     }
-    public function getTerre()
-    {
+    public function getTerre(){
         return $this->_terre;
     }
-
-    public function getMetal()
-    {
+    public function getMetal(){
         return $this->_metal;
     }
-
-    public function getEau()
-    {
+    public function getEau(){
         return $this->_eau;
     }
-
-    public function getPlante()
-    {
+    public function getPlante(){
         return $this->_plante;
     }
-
-    public function getLumiere()
-    {
+    public function getLumiere(){
         return $this->_lumiere;
     }
-
-    public function getTenebres()
-    {
+    public function getTenebres(){
         return $this->_tenebres;
     }
 
-    
-    
-// CES FONCTIONS SONT A AJOUTER SUR L'INDEX.PHP SAUF SI ON APPREND A
-// LES GARDER DANS LA CLASSE. CE SONT DES CONSTRUCTEURS AUTOMATIQUES
-    
-/*     function feu(){
-        $varElem = new Element("Feu", -20, 10, -20, 20, -10, 0, 0);
-        return $varElem;
-    }
-    function terre(){
-        $varElem = new Element("Terre", -10, -20, 10, -20, 20, 0, 0);
-        return $varElem;
-    }
-    function metal(){
-        $varElem = new Element("Métal", 20, -10, -20, 10, -20,  0, 0);
-        return $varElem;
-    }
-    function eau(){
-        $varElem = new Element("Eau", -20, 20, -10, -20, 10, 0, 0);
-        return $varElem;
-    }
-    function plante(){
-        $varElem = new Element("Plante", 10, -20, 20, -10, -20,  0, 0);
-        return $varElem;
-    }
-    function lumiere(){
-        $varElem = new Element("Lumière", 10, 10, 10, 10, 10, -100, 20);
-        return $varElem;
-    }
-    function tenebres(){
-        $varElem = new Element("Ténèbres", 10, 10, 10, 10, 10, 20, -100);
-        return $varElem;
-    } */
-
-
 }
+
+
+
+
+
+// Librairie pour créer les éléments
+
+// LORSQUE LA VALEUR EST NEGATIVE, L'EQUIPEMENT FAIT MOINS DE DEGATS
+    // EX : LE FEU RESISTE A LUI MEME ET DONC L'ATTAQUE FAIT 20% DE DEGATS
+    // EN MOINS
+
+function feu(){
+    $varElem = new Element("Feu", -20, 10, -20, 20, -10, 0, 0);
+    return $varElem;
+}
+function terre(){
+    $varElem = new Element("Terre", -10, -20, 10, -20, 20, 0, 0);
+    return $varElem;
+}
+function metal(){
+    $varElem = new Element("Métal", 20, -10, -20, 10, -20,  0, 0);
+    return $varElem;
+}
+function eau(){
+    $varElem = new Element("Eau", -20, 20, -10, -20, 10, 0, 0);
+    return $varElem;
+}
+function plante(){
+    $varElem = new Element("Plante", 10, -20, 20, -10, -20,  0, 0);
+    return $varElem;
+}
+function lumiere(){
+    $varElem = new Element("Lumière", 10, 10, 10, 10, 10, -100, 20);
+    return $varElem;
+}
+function tenebres(){
+    $varElem = new Element("Ténèbres", 10, 10, 10, 10, 10, 20, -100);
+    return $varElem;
+}
+
+
