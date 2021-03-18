@@ -1,36 +1,36 @@
 <?php
 
 class Element{
-    private $_nom;
-    private $_feu;
-    private $_terre;
-    private $_metal;
-    private $_eau;
-    private $_plante;
-    private $_lumiere;
-    private $_tenebres;
+    protected $_nom;
+    protected $_feu;
+    protected $_terre;
+    protected $_metal;
+    protected $_eau;
+    protected $_plante;
+    protected $_lumiere;
+    protected $_tenebres;
 
-    public function __construct($nom, $f, $t, $m, $e, $p, $lum, $ten){
-        $this->_nom = $nom;
-        $this->_feu = $f;
-        $this->_terre = $t;
-        $this->_metal = $m;
-        $this->_eau = $e;
-        $this->_plante = $p;
-        $this->_lumiere = $lum;
-        $this->_tenebres = $ten;
+    protected function __construct(){
+        $this->_nom = "";
+        $this->_feu = 0;
+        $this->_terre = 0;
+        $this->_metal = 0;
+        $this->_eau = 0;
+        $this->_plante = 0;
+        $this->_lumiere = 0;
+        $this->_tenebres = 0;
     }
 
 
     public function afficherDgt(){
         $str = "<p>Element ".$this->getNom()."<br>";
-        $str.= "Dégats contre Feu : ".$this->getFeu()."%<br>";
-        $str.= "Dégats contre Terre : ".$this->getTerre()."%<br>";
-        $str.= "Dégats contre Métal : ".$this->getMetal()."%<br>";
-        $str.= "Dégats contre Eau : ".$this->getEau()."%<br>";
-        $str.= "Dégats contre Plante : ".$this->getPlante()."%<br>";
-        $str.= "Dégats contre Lumière : ".$this->getLumiere()."%<br>";
-        $str.= "Dégats contre Ténèbres : ".$this->getTenebres()."%<br></p>";
+        $str.= "Dégats contre Feu : dégats x<b>".$this->getFeu()."</b><br>";
+        $str.= "Dégats contre Terre : dégats x<b>".$this->getTerre()."</b><br>";
+        $str.= "Dégats contre Métal : dégats x<b>".$this->getMetal()."</b><br>";
+        $str.= "Dégats contre Eau : dégats x<b>".$this->getEau()."</b><br>";
+        $str.= "Dégats contre Plante : dégats x<b>".$this->getPlante()."</b><br>";
+        $str.= "Dégats contre Lumière : dégats x<b>".$this->getLumiere()."</b><br>";
+        $str.= "Dégats contre Ténèbres : dégats x<b>".$this->getTenebres()."</b><br></p>";
         return $str;
     }
     
@@ -61,44 +61,3 @@ class Element{
     }
 
 }
-
-
-
-
-
-// Librairie pour créer les éléments
-
-// LORSQUE LA VALEUR EST NEGATIVE, L'EQUIPEMENT FAIT MOINS DE DEGATS
-    // EX : LE FEU RESISTE A LUI MEME ET DONC L'ATTAQUE FAIT 20% DE DEGATS
-    // EN MOINS
-
-function feu(){
-    $varElem = new Element("Feu", -20, 10, -20, 20, -10, 0, 0);
-    return $varElem;
-}
-function terre(){
-    $varElem = new Element("Terre", -10, -20, 10, -20, 20, 0, 0);
-    return $varElem;
-}
-function metal(){
-    $varElem = new Element("Métal", 20, -10, -20, 10, -20,  0, 0);
-    return $varElem;
-}
-function eau(){
-    $varElem = new Element("Eau", -20, 20, -10, -20, 10, 0, 0);
-    return $varElem;
-}
-function plante(){
-    $varElem = new Element("Plante", 10, -20, 20, -10, -20,  0, 0);
-    return $varElem;
-}
-function lumiere(){
-    $varElem = new Element("Lumière", 10, 10, 10, 10, 10, -100, 20);
-    return $varElem;
-}
-function tenebres(){
-    $varElem = new Element("Ténèbres", 10, 10, 10, 10, 10, 20, -100);
-    return $varElem;
-}
-
-
